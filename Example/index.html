@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Page Example</title>
+    <link rel="stylesheet" href="./css/ppage.css">
+</head>
+
+<body>
+    <div class="bodyhead">
+        <div class="headcontainer">
+            <header class="container-fluid col-12" style="padding: 0px; color: var(--text-black)">
+                <h1>Paper: A very nice paper!</h1>
+            </header>
+	    
+            <div class="authors">
+                <a href="#"><span>Author A<sup>1*</sup></span></a>,
+                <a href="#"><span>Author B<sup>1*</sup></span></a>,
+                <a href="#"><span>Author C<sup>2</sup></span></a>,
+                <a href="#"><span>Author D<sup>1</sup></span></a>,
+                <br>
+                <a href="#"><span>Author E<sup>3</sup></span></a>,
+                <a href="#"><span>Author F<sup>2</sup></span></a>,
+                <a href="#"><span>Author G<sup>1</sup></span></a>,
+                <a href="#"><span>Author H<sup>1✉</sup></span></a>
+                <div>
+                    <sup>1</sup>Affiliation 1
+                </div>
+                <div>
+                    <sup>2</sup>Affiliation 2
+                </div>
+                <div>
+                    <sup>3</sup>Affiliation 3
+                </div>
+                <div>
+                    <sup>*</sup><small>Equal contribution.</small>
+                </div>
+	    </div>
+	    <br>
+            <nav class="resource-links">
+                <a href="#">Paper</a>
+                <a href="#">Dataset</a>
+                <a href="#">Code</a>
+                <a href="#">Poster</a>
+                <!-- <a href="poster.pdf">Poster</a> -->
+            </nav>
+        </div>
+    </div>
+    <br>
+    <div class="articlecontrainer">
+        <article>
+            <br>
+            <section class="Method">
+                <h2>Abstract</h2>
+                <div class="paragraph">
+                    <p>This is the abstract of the paper. It provides a brief summary of the paper, including the problem addressed, the method proposed, the results obtained, and the conclusions drawn.</p>
+                    </p>
+                </div>
+                <br>
+                <img src="./imgs/nicepaper/overview.png" alt="Overview" class="img">
+                <br>
+                <div class="paragraph">
+                    <p>What a nice paper! This paper is about a very nice topic. We propose a very nice method to solve a very nice problem. Our method is very nice because it is very simple and very effective. We evaluate our method on a very nice dataset and show that it outperforms the state-of-the-art methods. Our paper is very nice because it is very well-written and very well-organized. We believe that our paper will have a very nice impact on the research community.</p>
+                    </p>
+                </div>
+            </section>
+
+            <section class="bibtex">
+                <h2>Bibtex</h2>
+		
+                <p>If you find this work helpful, you can cite our paper as follows:</p>
+                
+		<div class="bibcontainer">
+                    <button class="copy-btn" onclick="copyToClipboard()">copy bibtex</button>
+                    <pre>
+    @article{author2024example,
+        title={Paper: A very nice paper!},
+        author={Anonymous Author},
+        journal={arXiv preprint arXiv:2024.114514},
+        year={2024}
+    }
+                    </pre>
+                </div>
+		
+            </section>
+        </article>
+        <footer>
+            <p>If you have any questions or feedback, please contact <a href="mailto:nanae.nashi@outlook.com" style="color: var(--link-color)">NanaBot</a>.</p>
+        </footer>
+    </div>
+    <script src="./js/ppage.js"></script>
+</body>
+
+</html>
