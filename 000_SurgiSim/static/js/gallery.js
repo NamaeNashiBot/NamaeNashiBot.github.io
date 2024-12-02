@@ -8,7 +8,7 @@ function display(id) {
 }
 
 window.onload = function () {
-    const FolderUrl = 'supp/.src/demovideos/media/';
+    const FolderUrl = 'supp/src/demovideos/media/';
     const jsonFileUrl = 'static/js/videos.json';
 
     fetch(jsonFileUrl)
