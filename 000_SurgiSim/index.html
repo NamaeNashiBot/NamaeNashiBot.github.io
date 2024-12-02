@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Page for SurgiSim</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="./static/css/basic.css">
+    <link rel="stylesheet" href="./static/css/gallery.css">
+</head>
+
+<body>
+    <div class="bodyhead">
+        <div class="headcontainer">
+            <header class="container-fluid col-12" style="padding: 0px; color: var(--text-black)">
+                <h1>Realistic Surgical Simulation from Monocular Videos
+                </h1>
+            </header>
+
+            <div class="authors">
+                <h2 href="."><span>Anonymous</span></h2>
+            </div>
+            <nav class="resource-links">
+                <a href="./paper.pdf">Paper</a>
+                <a href=".">Code</a>
+                <a href="./supp/.src/demovideos/">Demo Videos</a>
+                <a href="./supp/">Supplementary Materials</a>
+            </nav>
+        </div>
+    </div>
+    <div class="articlecontrainer">
+        <h2>Demo</h2>
+        <div class="gallery">
+        </div>
+        <div id="lightbox">
+            <img id="lightbox-img" src="">
+        </div>
+        <section class="impara">
+            <h2>Abstract</h2>
+            <img src="./static/imgs/teaser.webp" width="50%" alt="teaser" class="img">
+            <p>
+                In this paper, we propose SurgiSim, a novel automatic simulation system to overcome
+                these limitations. To build a surgical simulation environment, we maintain a canonical 3D
+                scene composed of 3D Gaussians coupled with a deformation field to represent a dynamic surgical
+                scene. This process involves a multi-stage optimization with trajectory and anisotropic
+                regularization, enhancing the geometry consistency of the canonical scene, which serves as the
+                simulation environment. To achieve realistic physical simulations in this environment, we implement
+                a Visco-Elastic deformation model based on the Maxwell model, effectively restoring
+                the complex deformations of tissues. Additionally, we infer the physical parameters of tissues
+                by minimizing the discrepancies between the input video and simulation results guided by estimated
+                tissue motion, ensuring realistic simulation outcomes.
+            </p>
+        </section>
+
+        <section class="impara">
+            <h2>Method</h2>
+            <img src="./static/imgs/overview.webp" alt="overview" class="img">
+            <p>
+                Given a monocular surgical video, the system constructs a canonical 3D simulation
+                environment using 3D Gaussian Splatting and a multi-stage optimization process.
+                This reconstruction ensures geometric consistency and introduces surface thickening to
+                better serve the need of simulation.
+            </p>
+            <img src="./static/imgs/physes.webp" alt="physes" class="img">
+            <p>
+                Building upon the reconstructed simulation environment, we incorporate visco-elastic modeling to 
+                simulate the complex physical behaviors of surgical tissues with Material Point Method (MPM).
+                We estimate the tissue motion using pixel tracking and drive the 
+            </p>
+        </section>
+
+
+        <section class="impara">
+            <h2>Results and Comparisons</h2>
+            <img src="./static/imgs/simres.webp" alt="simres" class="img">
+            <p>
+                This figure demonstrates the superior performance of SurgiSim in simulating realistic tissue dynamics. 
+                Unlike baselines that show unnatural oscillations or artifacts, 
+                SurgiSim faithfully models tissue deformation and rebound, reflecting real-world surgical behavior. 
+                The damping effects of the proposed viscoelastic model ensure tissues return naturally to 
+                a stationary state after external forces cease, achieving both visual and physical realism.
+            </p>
+            <img src="./static/imgs/yt.webp" width="60%" alt="yt" class="img">
+            <p>
+                This figure highlights the realistic simulation of tissue motion by SurgiSim. 
+                The tissue rapidly returns to a stable state after release, 
+                replicating real damping effects, while baselines exhibit persistent oscillations due to their inability to 
+                model viscoelastic properties. This further validates the effectiveness of SurgiSim in producing realistic tissue behavior.
+            </p>
+        </section>
+
+        <section class="bibtex">
+            <h2>Bibtex</h2>
+
+            <p>If you find this work helpful, you can cite our paper as follows:</p>
+
+            <div class="bibcontainer">
+                <button class="copy-btn" onclick="copyToClipboard()">copy bibtex</button>
+                <pre>
+@article{Ano2024surgisim,
+    title={Realistic Surgical Simulation from Monocular Videos},
+    author={Anonymous},
+    journal={arXiv preprint arXiv:0000.00000},
+    year={2024}
+}
+                </pre>
+            </div>
+        </section>
+        <footer>
+            &copy; 2024 SurgiSim Team. All Rights Reserved.
+            <p>If you have any questions or feedback, please contact <a href="mailto:namae.nashi@outlook.com" style="color: var(--link-color)">NanaBot</a> with the name of this page.</p>
+        </footer>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="./static/js/basic.js"></script>
+    <script src="./static/js/gallery.js"></script>
+</body>
+
+</html>

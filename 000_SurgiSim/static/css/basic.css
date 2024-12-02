@@ -1,0 +1,269 @@
+:root {
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --text-black: #222;
+    --text-white: #eee;
+    --text-gray: #aaa;
+    --bg-gray: rgba(225, 225, 225, 0.5);
+    --bg-white: rgba(255, 255, 255, 0.5);
+    --link-color: #0d6efd;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+body {
+    font-family: var(--bs-body-font-family);
+    color: var(--bs-body-color);
+    margin: 0;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.h1,
+h1 {
+    font-size: 2.5rem;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.headcontainer {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.bodyhead {
+    background: var(--bg-gray);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 30px 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.bodyhead::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../imgs/bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.articlecontrainer {
+    max-width: 1000px;
+    width: 75%;
+    margin: 10px auto 0;
+    padding: 0 20px;
+    background: var(--bg-white);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.authors,
+.resource-links,
+.bibtex,
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+.authors a {
+    text-decoration: None;
+    color: var(--link-color);
+    font-weight: 500;
+    font-size: large;
+    line-height: 1.5;
+}
+
+.authors a:hover {
+    text-decoration: underline;
+}
+
+.resource-links a {
+    margin: 0 10px 10px;
+    padding: 10px 20px;
+    background: #343a40;
+    border: 1px solid #343a40;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: large;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-block;
+}
+
+.resource-links a:hover {
+    background-color: #495057;
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.articlecontrainer h2 {
+    font-size: 30px;
+    font-weight: 750;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#video-container video {
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#video-container video.show {
+    opacity: 1;
+}
+
+#video-container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.impara {
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.impara p,
+.bibtex p {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-black);
+    margin-top: auto;
+    margin-bottom: 16px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.impara img {
+    max-width: 90%;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.impara p:last-child {
+    margin-bottom: 0;
+}
+
+.bibcontainer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.bibcontainer pre {
+    overflow-x: auto;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    text-align: left;
+    font-size: medium;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    /* Light gray background */
+    border: 1px solid #e8e9ea;
+    /* Dark gray border */
+    color: #343a40;
+    /* Dark gray text */
+    text-align: center;
+    border-radius: 10px;
+    /* Flat design with no rounded corners */
+}
+
+.copy-btn:hover {
+    background-color: #6c757d;
+    color: var(--text-white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+footer {
+    background: var(--bg-white);
+    /* Black background */
+    color: var(--text-gray);
+    /* Light gray text */
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    /* Light gray top border */
+    text-align: left;
+    /* Text aligned to the left */
+}
